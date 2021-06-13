@@ -1,0 +1,25 @@
+PROCEDURE Dot_Product(vector1:ARRAY_OF double[], vector2 : ARRAY_OF double[])
+VAR
+    PS : integer =0;
+
+BEGIN
+    for(let i = 0; i < vector1.length; i++){
+        PS += vector1[i] * vector2[i]
+      }
+ 
+  }
+END 
+
+   ALGORITHM Dot_Product
+   VAR
+       var i : integer;
+       var j : integer;
+       var n : integer;
+   BEGIN
+        for(i = 0; i < n; i++){
+          for(j = i + 1; j < n; j++){
+            if(dotProduct(vectors[i], vectors[j]) === 0){
+             write({vector1[i]}"and"{vector2[j]}"are"are orthogonal )
+      }
+    }
+   END
