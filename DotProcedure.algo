@@ -12,13 +12,13 @@ END
 
    ALGORITHM Dot_Product
    VAR
-       var i : integer;
-       var j : integer;
-       var n : integer;
+      i,j,n: INTEGER;
+      vector1,vector2:ARRAY_OF double[];
+       
    BEGIN
         for(i = 0; i < n; i++){
           for(j = i + 1; j < n; j++){
-            if(dotProduct(vectors[i], vectors[j]) === 0){
+            if(Dot_Product(vectors[i], vectors[j]) === 0){
              write({vector1[i]}"and"{vector2[j]}"are"are orthogonal )
       }
     }
