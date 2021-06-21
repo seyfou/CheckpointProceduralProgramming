@@ -1,4 +1,4 @@
-FUNCTION Dot_Product(vector1:ARRAY_OF double[], vector2 : ARRAY_OF double[]) : return_type
+FUNCTION Dot_Product(vector1:ARRAY_OF double[], vector2 : ARRAY_OF double[]) : return_Integer
 VAR
     PS : integer =0;
 BEGIN
@@ -6,19 +6,17 @@ BEGIN
         PS += vector1[i] * vector2[i]
       }
       write(Ps);
- 
   }
 END 
 
 ALGORITHM Dot_Product
    VAR
-       var i : integer;
-       var j : integer;
-       var n : integer;
+      i , j , n : integer;
+      vector1,vector2:ARRAY_OF double[];
    BEGIN
         for(i = 0; i < n; i++){
           for(j = i + 1; j < n; j++){
-            if(dotProduct(vectors[i], vectors[j]) === 0){
+            if(Dot_Product(vector1[i], vector2[j]) === 0){
              write({vector1[i]}"and"{vector2[j]}"are"are orthogonal )
       }
     }
