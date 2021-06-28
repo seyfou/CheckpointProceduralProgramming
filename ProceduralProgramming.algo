@@ -1,0 +1,36 @@
+PROCEDURE dot_product(n : INTEGER , VAR tab : ARRAY_OF array[2*n])
+VAR
+    i : INTEGER
+BEGIN
+    FOR i FROM 0 TO 2*n-1 STEP 2  DO
+        IF (PS(tab[i] , tab[i+1]=0)) THEN
+            Writeln (tab[i] , "and " , tab[i+1] , "are orthogonal");
+        ELSE
+            Writeln ( tab[i] , "and " , tab[i+1] , "are not orthogonal");
+        END_IF
+    END_FOR
+END
+
+FUNCTION PS(A : ARRAY_OF INTEGER[] , B : ARRAY_OF INTEGER[]) : INTEGER
+VAR
+    R : INTEGER;
+    i : INTEGER;
+BEGIN
+    R:=0;
+    FOR i FROM 0 TO 2 STEP 1  DO
+        R:= R + (A[i]*B[i]);
+    END_FOR
+    RETURN R ;
+END
+
+
+ALGORITHM dot_product
+VAR
+    n : INTEGER;
+    v : ARRAY_OF ARRAY [2*n];
+
+BEGIN
+    Writeln("n pairs of given vectors");
+    read(n);
+    dot_product(n,v);
+END
